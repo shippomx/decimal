@@ -2165,14 +2165,14 @@ func NewDecFromUint(i uint64) *MyDecimal {
 }
 
 // NewDecFromFloatForTest creates a MyDecimal from float, as it returns no error, it should only be used in test.
-func NewDecFromFloatForTest(f float64) (*MyDecimal, error) {
+func NewDecFromFloat(f float64) (*MyDecimal, error) {
 	dec := new(MyDecimal)
 	err := dec.FromFloat64(f)
 	return dec, err
 }
 
 // NewDecFromStringForTest creates a MyDecimal from string, as it returns no error, it should only be used in test.
-func NewDecFromStringForTest(s string) (*MyDecimal, error) {
+func NewDecFromString(s string) (*MyDecimal, error) {
 	dec := new(MyDecimal)
 	err := dec.FromString([]byte(s))
 	return dec, err
