@@ -402,7 +402,7 @@ func (d *MyDecimal) ToString() string {
 // FromString parses decimal from string.
 func (d *MyDecimal) FromString(str []byte) error {
 	dotCnt := strings.Count(string(str), ".")
-	if dotCnt > 2 {
+	if dotCnt > 1 {
 		return ErrBadNumber
 	}
 	for i := 0; i < len(str); i++ {
